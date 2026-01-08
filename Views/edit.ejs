@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") -%>
+
+  <body>
+    <h3>Edit your Listing</h3>
+    <br>
+ <div class="row offset-3">
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="col-md-8 mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input name="listing[title]" placeholder="Add a catchy title" type="text" value="<%=listing.title%>" class="form-control" required>
+        <div class="valid-feedback">Good Tilte</div>
+      </div>
+
+      <div class="col-md-8 mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea name="listing[description]" type="text" class="form-control" required><%=listing.description%></textarea>
+        <div class="invalid-feedback">Please provide short description</div>
+      </div>
+<div class="mb-3">
+  OriginalListing Image<br>
+  <img src="<%=originalImageUrl%>"/>
+</div>
+      <div class="col-md-8 mb-3">
+        <label for="image" class="form-label">Upload New Image:</label>
+        <input name="listing[image]"  type="file" value="<%=listing.image%>" class="form-control">
+      </div>
+
+      <div class="col-md-8 mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <input name="listing[price]" placeholder="1200" type="number" value="<%=listing.price%>" class="form-control" required>
+        <div class="invalid-feedback">Please provide valid price</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4  mb-3">
+          <label for="location" class="form-label">location:</label>
+          <input name="listing[location]" placeholder="Jaipur,Rajasthan" type="text" value="<%=listing.location%>" class="form-control" required>
+          <div class="invalid-feedback">Please provide location</div>
+        </div>
+
+        <div class="col-md-4  mb-3">
+          <label for="country" class="form-label">country:</label>
+          <input name="listing[country]" placeholder="India" type="text" value="<%=listing.country%>" class="form-control" required>
+          <div class="invalid-feedback">Please wrute country name</div>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-dark rounded-3 border-0 px-3" style="background-color: #fe424d;">Edit</button>
+      <br>
+    </form>
+    </div>
+  </body>
+
+  </html>

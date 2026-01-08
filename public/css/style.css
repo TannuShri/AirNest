@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+footer{
+    background-color: #d3cece;
+}
+a{
+    color: #222222;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.card{
+  margin-bottom: 2rem !important;
+    border: none !important;
+     position: relative;
+  overflow: hidden;
+    
+}
+.card-body{
+    padding: 0 !important;
+    font-weight: 400 !important;
+}
+.card-img-top{
+    width: 100% !important ;
+    border-radius: 2rem !important;
+    object-fit: cover !important;
+}
+.card-body p{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* optional dark overlay */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-img-overlay:hover{
+    display: block;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+.custm-border{
+    border: 1px solid black !important;
+}

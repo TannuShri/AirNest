@@ -1,0 +1,53 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: #ffffff;
+    border: none;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+    width: auto;
+  }
+</style>
+
+
+
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light d-flex align-items-center justify-content-center border-bottom sticky-top w-100">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i> <i class="pt-2" style="color: #fe424d; font-weight: bolder; font-size: 25px;">AirNest</i>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+
+      </div>
+<div class="navbar-nav ms-auto">
+     <form class="d-flex align-items-center" method="GET" action="/listings">
+  <input class="form-control me-2 rounded-pill px-4 py-2" type="search" name="location"
+         placeholder="Search location">
+  <button class="search-btn rounded-pill px-3 py-2" type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</form>
+</div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <% if(!currUser){ %>
+          <a class="nav-link" href="/signup"><b>sign up</b></a>
+          <a class="nav-link" href="/login"><b>login</b></a>
+          <%} %>
+            <% if(currUser){ %>
+              <a class="nav-link" href="/logout"><b>logout</b></a>
+              <%} %>
+      </div>
+    </div>
+  </div>
+</nav>
